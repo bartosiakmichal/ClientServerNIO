@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Publisher.PublisherClientController">
+    <children>
+        <Separator layoutX="157.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="0.0" />
+        <Pane prefHeight="600.0" prefWidth="160.0" style="-fx-background-color: #36394b;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Separator layoutX="-20.0" layoutY="247.0" prefWidth="200.0" />
+                <Label layoutX="6.0" layoutY="64.0" text="Add/Remove topic:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Button fx:id="subscribeButton" layoutX="6.0" layoutY="134.0" mnemonicParsing="false" onAction="#processAddTopic" prefWidth="146.0" text="Add topic">
+                    <font>
+                        <Font name="Century Gothic" size="12.0" />
+                    </font>
+                </Button>
+                <Label layoutX="6.0" layoutY="257.0" text="Topics:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="allertLabel" layoutX="6.0" layoutY="156.0" textFill="#fc0000">
+                    <font>
+                        <Font name="Century Gothic" size="12.0" />
+                    </font>
+                </Label>
+            <ComboBox fx:id="topicsComboBox" layoutX="5.0" layoutY="89.0" prefWidth="150.0" />
+            <Button fx:id="unsubscribeButton" layoutX="6.0" layoutY="164.0" mnemonicParsing="false" onAction="#processRemoveTopic" prefWidth="146.0" text="Remove topic">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="updateTopicsButton" layoutX="7.0" layoutY="196.0" mnemonicParsing="false" onAction="#processAddNews" prefWidth="146.0" text="Add news">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Button>
+            <Separator layoutY="57.0" prefWidth="200.0" />
+            <Label layoutX="9.0" layoutY="21.0" text="USER:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameLabel" layoutX="52.0" layoutY="21.0" text="Username" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ListView fx:id="topicsListView" layoutX="6.0" layoutY="277.0" prefHeight="185.0" prefWidth="146.0" />
+            </children>
+        </Pane>
+      <ScrollPane layoutX="160.0" prefHeight="600.0" prefWidth="640.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="597.0" prefWidth="636.0">
+               <children>
+                  <TextArea fx:id="topicsLabel" layoutY="10.0" prefHeight="300.0" prefWidth="615.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor>
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </TextArea>
+                  <TreeView fx:id="treeView" layoutX="11.0" layoutY="303.0" prefHeight="290.0" prefWidth="615.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="300.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>
